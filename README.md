@@ -10,7 +10,7 @@ The project implements the `merge` function with this interface:
 merge(collection_1: number[], collection_2: number[], collection_3: number[]): number[]
 ```
 
-Where:
+Given:
 
 - `collection_1` & `collection_3`: Already sorted ascending (min → max)
 - `collection_2`: Already sorted descending (max → min)
@@ -32,6 +32,12 @@ git clone <repository-url>
 
 ```bash
 npm install
+```
+
+### Run example code
+
+```bash
+npm run dev
 ```
 
 ### Run unit tests
