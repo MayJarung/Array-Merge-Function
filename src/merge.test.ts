@@ -25,12 +25,24 @@ describe("merge function", () => {
     expect(result).toEqual([1, 1, 2, 3, 3, 3, 4, 5, 5]);
   });
 
-  test("should handle empty arrays or single-element arrays", () => {
-    // All empty
+  // test("should handle empty arrays or single-element arrays", () => {
+  //   // All empty
+  //   expect(merge([], [], [])).toEqual([]);
+  //   // Only one array has elements
+  //   expect(merge([1, 2, 3], [], [])).toEqual([1, 2, 3]);
+  //   // Single-element arrays
+  //   expect(merge([5], [3], [7])).toEqual([3, 5, 7]);
+  // });
+
+  test("should handle all empty arrays", () => {
     expect(merge([], [], [])).toEqual([]);
-    // Only one array has elements
+  });
+
+  test("should handle only one array with elements", () => {
     expect(merge([1, 2, 3], [], [])).toEqual([1, 2, 3]);
-    // Single-element arrays
+  });
+
+  test("should handle single-element arrays", () => {
     expect(merge([5], [3], [7])).toEqual([3, 5, 7]);
   });
 
